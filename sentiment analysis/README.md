@@ -10,3 +10,5 @@ Install streamlit
 
 streamlit run sentiment-analysis-streamlit.py in your command line and then interact with it in your browser.
 
+Referred from https://github.com/MarcSkovMadsen/awesome-streamlit
+
