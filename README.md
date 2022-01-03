@@ -5,4 +5,4 @@
 * [Sentiment Analysis](https://github.com/dvellanki/data-analytics-projects/tree/main/sentiment%20analysis)
 * [Visualizing Climate Change](https://github.com/dvellanki/data-analytics-projects/tree/main/Visualizing%20Climate%20Change%20Data)
 * [Toxic Comment Classification-NLP](https://github.com/dvellanki/data-analytics-projects/tree/main/comment-classification)
-* ]Video Classification Module for Auto Keras]()
+* [Video Classification Module for Auto Keras](https://github.com/dvellanki/data-analytics-projects/tree/main/Auto-ML%20Video%20Classification)
