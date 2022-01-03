@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Toxic Content Filtering</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!--<link rel="stylesheet" href="form.css" >-->
+        <!--<script src="form.js"></script>-->
+    </head>
+    <body >
+        <div class="container">
+            <div class = "row">
+                <!--<div class="col-md-1"></div>-->
+                <div class="col-md-4" id="form_container" style="justify-content: center;">
+                    <h2>Comment: </h2>
+                    <br>
+                    <h4>{{ message }}</h4>
+                </div>
+                <div class="col-md-4"></div>
+                <!--<div class="col-md-1"></div>-->
+                <div class="col-md-4" id="form_container">
+                    <h2>Predictions: </h2>
+                    <br>
+                    <ul style="list-style-type: none;">
+                        <li>Toxic : {{ "{0:.2f}".format(predictions['toxic'].item()*100) }} %</li>
+                        <br>
+                        <li>Severe Toxic : {{ "{0:.2f}".format(predictions['severe_toxic'].item()*100) }} %</li>
+                        <br>
+                        <li>Obscene : {{ "{0:.2f}".format(predictions['obscene'].item()*100) }} %</li>
+                        <br>
+                        <li>Threat : {{ "{0:.2f}".format(predictions['threat'].item()*100) }} %</li>
+                        <br>
+                        <li>Insult : {{ "{0:.2f}".format(predictions['insult'].item()*100) }} %</li>
+                        <br>
+                        <li>Identity Hate : {{ "{0:.2f}".format(predictions['identity_hate'].item()*100) }} %</li>
+                    </ul>
+                    <!--<br>-->
+                    <!--<h2>Overall Toxicity : {{ "{0:.2f}".format(predictions.mean(axis=1).item()*100) }} %</h2>-->
+                </div>
+                <!--<div class="col-md-1"></div>-->
+            </div>
+        </div>
+    </body>
+</html>
+
+<style>
+li{
+    font-size: 20px;
+}
+#form_container
+{
+	padding:15px 30px;
+	margin-top:8%;
+	background: rgba(0,0,0,0.5);
+	color:#acc2ca;
+}
+body
+{
+	background-color: #00000038;
+	background-size: cover;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+body::after {
+  content: "";
+  background: url("static/images/toxic1.jpg");
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background-position: center;
+  z-index: -1;
+  background-size: cover;
+}
+.upload-btn-wrapper
+{
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.upload-btn-wrapper input[type=file]
+{
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+</style>
